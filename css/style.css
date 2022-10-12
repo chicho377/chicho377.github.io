@@ -35,9 +35,9 @@ body
 #container
 {
     width: 70%;
-    padding: 1em;
+    padding: 0;
     text-align: left;
-    border: 1px solid #ddd;
+    border: 1px solid #DDD;
     margin: 0 auto;
 }
 
@@ -47,12 +47,12 @@ body
 }
 #post
 {
+    background-color: white;
     padding: 1em;
-    border: 1px solid #ddd;
 }
 #footer
 {
-    background: #777;
+    background: #338;
     color: #fff;
     text-align: center;
     padding: 0.5em;
