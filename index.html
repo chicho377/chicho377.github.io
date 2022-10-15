@@ -1,28 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta charset="utf-8" />
+        <title>MOKEPONE!</title>
+        <link rel="stylesheet" href="./styles.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Botcito</title>
-        <link rel="stylesheet" href="/css/style.css" />
     </head>
     <body>
-        <div id="container">
-            <div id="cabecera">
-                <img id="logo" src="https://imgs.search.brave.com/NbmBvjIaoQGAuiJDwCRE0WscInfY73YuHMkkx7Xqqac/rs:fit:1024:768:1/g:ce/aHR0cHM6Ly92aXN0/YXJtYWdhemluZS5j/b20vd3AtY29udGVu/dC91cGxvYWRzLzIw/MjEvMDgvMTEtMS5q/cGc" />
-                Rocha botcito
-                <span id="tagline">Blog sobre el botcito</span>
+        <section id="seleccionar-mascota">
+            <h1 class="titulo">Mokepon</h1>
+
+            <h2 class="subtitulo">Elige tu mascota:</h2>
+
+            <div id="contenedor-tarjetas" class="tarjetas">
+
             </div>
-            <div id="post">
-                <h1>BOTCITO</h1>
-                <p>Parrafo para escribir en el blog</p>
-                <p>Nuevo parrafo, modificado con html y css.</p>
-                <p>Hola putitos</p>
+
+            <button id="boton-seleccionar">seleccionar</button>
+        </section>
+
+        <section id="ver-mapa">
+            <h2 class="subtitulo">Recorre el mapa con tu mokepon</h2>
+            <canvas id="mapa"></canvas>
+            <button ontouchend="detenerMovimiento()" onmouseup="detenerMovimiento()" ontouchstart="moverArriba()" onmousedown="moverArriba()">Arriba</button>
+            <div>
+                <button ontouchend="detenerMovimiento()" onmouseup="detenerMovimiento()" ontouchstart="moverIzquierda()" onmousedown="moverIzquierda()">Izquierda</button>
+                <button ontouchend="detenerMovimiento()" onmouseup="detenerMovimiento()" ontouchstart="moverAbajo()" onmousedown="moverAbajo()">Abajo</button>
+                <button ontouchend="detenerMovimiento()" onmouseup="detenerMovimiento()" ontouchstart="moverDerecha()" onmousedown="moverDerecha()">Derecha</button>
             </div>
-            <div id="footer">
-                DALEEEEEEEEEEEE!!! &lt;3
-            </div>
-        </div>
+
+        </section>
+
+        <section id="seleccionar-ataque">
+            <h1 class="titulo">Mokepon</h1>
+
+            <h2 class="subtitulo">Elige tu ataque:</h2>
+
+                <div id="contenedor-ataques" class="tarjetas-ataques">
+                    </div>
+
+                    <div id="mensajes">
+                        <p id="resultado">Mucha suerte</p>
+
+                        <section id="reiniciar">
+                            <button id="boton-reiniciar">Reiniciar</button>
+                        </section>
+                    </div> 
+
+                <div class="ataques">
+                    <div class="ataques-jugador">
+                        <p id="vidas-jugador">0</p>
+                        <p id="mascota-jugador"></p>
+                        <div id="ataque-del-jugador"></div>
+                    </div>
+                    <div class="ataques-enemigo">
+                        <p id="vidas-enemigo">0</p>
+                        <p id="mascota-enemigo"></p>
+                        <div id="ataque-del-enemigo"></div>
+                    </div>
+                </div>
+        </section>
+        <script src="./js/mokepon.js"></script>
     </body>
 </html>
